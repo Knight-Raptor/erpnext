@@ -93,6 +93,8 @@
   "packed_items",
   "pricing_rule_details",
   "pricing_rules",
+  "section_break_kpje",
+  "linked_purchase_orders",
   "contact_info",
   "billing_address_column",
   "customer_address",
@@ -1506,7 +1508,7 @@
    "read_only": 1
   },
   {
-   "default": "0",
+   "default": "1",
    "depends_on": "grand_total",
    "fieldname": "disable_rounded_total",
    "fieldtype": "Check",
@@ -1638,13 +1640,24 @@
    "no_copy": 1,
    "print_hide": 1,
    "report_hide": 1
+  },
+  {
+   "fieldname": "section_break_kpje",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "linked_purchase_orders",
+   "fieldtype": "Table",
+   "label": "Linked Purchase Orders",
+   "options": "Sales Order Purchase Orders"
   }
  ],
  "icon": "fa fa-file-text",
  "idx": 105,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-18 12:41:54.813462",
+ "modified": "2025-06-10 22:37:38.170057",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Sales Order",

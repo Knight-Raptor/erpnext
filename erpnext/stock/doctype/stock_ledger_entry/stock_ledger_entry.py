@@ -38,6 +38,7 @@ class StockLedgerEntry(Document):
 		from frappe.types import DF
 
 		actual_qty: DF.Float
+		amended_from: DF.Link | None
 		auto_created_serial_and_batch_bundle: DF.Check
 		batch_no: DF.Data | None
 		company: DF.Link | None

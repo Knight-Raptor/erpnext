@@ -1138,3 +1138,47 @@ var select_loyalty_program = function (frm, loyalty_programs) {
 
 	dialog.show();
 };
+frappe.ui.form.on('Sales Invoice', {
+	customer: function (frm) {
+		$.each(frm.doc.payments || [], function (i, row) {
+			frm.doc.payments[i].amount = 0;
+			frm.doc.paid_amount = 0;
+		});
+		frm.refresh_field('payments');
+	},
+	// after_save: function (frm) {
+		// if (!frm.custom_script_executed) {
+			// $.each(frm.doc.payments || [], function (i, row) {
+				// if (row.amount !== 0) {
+					// frm.doc.payments[i].amount = 0;
+					// frm.doc.paid_amount = 0;
+				// }
+			// });
+			// frm.refresh_field('payments');
+			// frm.custom_script_executed = true;
+		// }
+	// }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

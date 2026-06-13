@@ -16,6 +16,7 @@ class ProductBundleItem(Document):
 
 		description: DF.TextEditor | None
 		item_code: DF.Link
+		minimum_stock: DF.Float
 		parent: DF.Data
 		parentfield: DF.Data
 		parenttype: DF.Data

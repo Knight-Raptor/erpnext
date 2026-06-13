@@ -25,7 +25,6 @@
   "return_against",
   "accounting_dimensions_section",
   "cost_center",
-  "column_break_18",
   "project",
   "dimension_col_break",
   "currency_and_price_list",
@@ -493,6 +492,7 @@
    "print_hide": 1
   },
   {
+   "default": "Stores - SEN",
    "fieldname": "set_warehouse",
    "fieldtype": "Link",
    "label": "Set Source Warehouse",
@@ -1377,10 +1377,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "column_break_18",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "incoterm",
    "fieldtype": "Link",
    "label": "Incoterm",
@@ -1397,7 +1393,7 @@
  "idx": 146,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-03-05 11:58:47.784349",
+ "modified": "2024-03-30 12:49:57.715847",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Delivery Note",

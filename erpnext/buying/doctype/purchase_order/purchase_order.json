@@ -26,6 +26,7 @@
   "is_subcontracted",
   "supplier_warehouse",
   "amended_from",
+  "is_market_place",
   "accounting_dimensions_section",
   "cost_center",
   "dimension_col_break",
@@ -99,6 +100,8 @@
   "discount_amount",
   "sec_tax_breakup",
   "other_charges_calculation",
+  "section_break_jjzi",
+  "sales_order",
   "address_and_contact_tab",
   "section_addresses",
   "supplier_address",
@@ -1269,13 +1272,29 @@
    "fieldtype": "Tab Break",
    "label": "Connections",
    "show_dashboard": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_market_place",
+   "fieldtype": "Check",
+   "label": "Is Market Place"
+  },
+  {
+   "fieldname": "section_break_jjzi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "label": "Sales Order",
+   "options": "Sales Order"
   }
  ],
  "icon": "fa fa-file-text",
  "idx": 105,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-01 20:58:07.851037",
+ "modified": "2025-03-21 19:06:29.451485",
  "modified_by": "Administrator",
  "module": "Buying",
  "name": "Purchase Order",

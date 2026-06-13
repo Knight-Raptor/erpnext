@@ -19,6 +19,7 @@
   "posting_time",
   "set_posting_time",
   "due_date",
+  "delivery_note_no",
   "column_break_14",
   "is_pos",
   "pos_profile",
@@ -59,6 +60,15 @@
   "column_break_52",
   "total",
   "net_total",
+  "payments_section",
+  "cash_bank_account",
+  "create_jv_for_wallet_amount",
+  "payments",
+  "sales_order_payment",
+  "section_break_ejah",
+  "paid_amount",
+  "column_break_ebeu",
+  "base_paid_amount",
   "taxes_section",
   "tax_category",
   "taxes_and_charges",
@@ -109,13 +119,6 @@
   "column_break_106",
   "total_billing_amount",
   "payments_tab",
-  "payments_section",
-  "cash_bank_account",
-  "payments",
-  "section_break_84",
-  "base_paid_amount",
-  "column_break_86",
-  "paid_amount",
   "section_break_88",
   "base_change_amount",
   "column_break_90",
@@ -147,6 +150,7 @@
   "address_display",
   "col_break4",
   "contact_person",
+  "addr_line_2",
   "contact_display",
   "contact_mobile",
   "contact_email",
@@ -925,6 +929,7 @@
    "hide_seconds": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "taxes",
    "fieldtype": "Table",
    "hide_days": 1,
@@ -1334,17 +1339,6 @@
    "print_hide": 1
   },
   {
-   "collapsible": 1,
-   "collapsible_depends_on": "eval:!doc.is_pos",
-   "depends_on": "eval:doc.is_pos===1",
-   "fieldname": "payments_section",
-   "fieldtype": "Section Break",
-   "hide_days": 1,
-   "hide_seconds": 1,
-   "label": "Payments",
-   "options": "fa fa-money"
-  },
-  {
    "allow_on_submit": 1,
    "depends_on": "is_pos",
    "fieldname": "cash_bank_account",
@@ -1369,12 +1363,6 @@
    "print_hide": 1
   },
   {
-   "fieldname": "section_break_84",
-   "fieldtype": "Section Break",
-   "hide_days": 1,
-   "hide_seconds": 1
-  },
-  {
    "depends_on": "eval: doc.is_pos || doc.redeem_loyalty_points",
    "fieldname": "base_paid_amount",
    "fieldtype": "Currency",
@@ -1385,12 +1373,6 @@
    "options": "Company:company:default_currency",
    "print_hide": 1,
    "read_only": 1
-  },
-  {
-   "fieldname": "column_break_86",
-   "fieldtype": "Column Break",
-   "hide_days": 1,
-   "hide_seconds": 1
   },
   {
    "depends_on": "eval: doc.is_pos || doc.redeem_loyalty_points",
@@ -1973,7 +1955,7 @@
    "label": "Is Rate Adjustment Entry (Debit Note)"
   },
   {
-   "default": "0",
+   "default": "1",
    "depends_on": "grand_total",
    "fieldname": "disable_rounded_total",
    "fieldtype": "Check",
@@ -2171,6 +2153,42 @@
    "fieldname": "update_outstanding_for_self",
    "fieldtype": "Check",
    "label": "Update Outstanding for Self"
+  },
+  {
+   "fieldname": "sales_order_payment",
+   "fieldtype": "Table",
+   "label": "Sales Order Payment",
+   "options": "Sales Order Payment"
+  },
+  {
+   "fieldname": "create_jv_for_wallet_amount",
+   "fieldtype": "Button",
+   "label": "Create JV for Wallet Amount"
+  },
+  {
+   "fieldname": "addr_line_2",
+   "fieldtype": "Data",
+   "label": "Addr Line 2",
+   "length": 300
+  },
+  {
+   "fieldname": "section_break_ejah",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ebeu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "payments_section",
+   "fieldtype": "Section Break",
+   "label": "Payments"
+  },
+  {
+   "fieldname": "delivery_note_no",
+   "fieldtype": "Data",
+   "label": "Delivery Note No"
   }
  ],
  "icon": "fa fa-file-text",
@@ -2183,7 +2201,7 @@
    "link_fieldname": "consolidated_invoice"
   }
  ],
- "modified": "2024-03-11 14:20:34.874192",
+ "modified": "2025-04-20 13:37:54.122949",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Sales Invoice",
@@ -2192,7 +2210,6 @@
  "permissions": [
   {
    "amend": 1,
-   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,

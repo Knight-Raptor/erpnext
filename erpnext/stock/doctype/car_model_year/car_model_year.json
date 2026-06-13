@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:car_model_year",
+ "creation": "2024-03-19 11:09:27.684333",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "car_model_year",
+  "lft",
+  "rgt",
+  "is_group",
+  "old_parent",
+  "parent_car_model_year"
+ ],
+ "fields": [
+  {
+   "fieldname": "car_model_year",
+   "fieldtype": "Data",
+   "label": "Car Model Year",
+   "unique": 1
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "label": "Old Parent",
+   "options": "Car Model Year"
+  },
+  {
+   "fieldname": "parent_car_model_year",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Parent Car Model Year",
+   "options": "Car Model Year"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_tree": 1,
+ "links": [],
+ "modified": "2024-03-19 11:32:20.125767",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "Car Model Year",
+ "naming_rule": "By fieldname",
+ "nsm_parent_field": "parent_car_model_year",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
