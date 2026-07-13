@@ -218,6 +218,9 @@ def convert_to_group_or_ledger(docname=None):
 def get_child_warehouses(warehouse):
 	from frappe.utils.nestedset import get_descendants_of
 
+	if not frappe.db.exists("Warehouse", warehouse):
+		return [warehouse]
+
 	children = get_descendants_of("Warehouse", warehouse, ignore_permissions=True, order_by="lft")
 	return children + [warehouse]  # append self for backward compatibility
 
