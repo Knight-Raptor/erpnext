@@ -53,7 +53,6 @@
   {
    "allow_on_submit": 1,
    "columns": 2,
-   "default": "42300 - Delivery Service - SEN",
    "fieldname": "account_head",
    "fieldtype": "Link",
    "in_list_view": 1,
