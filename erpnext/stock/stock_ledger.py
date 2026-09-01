@@ -1450,7 +1450,11 @@ def get_previous_sle_of_current_voucher(args, operator="<", exclude_current_vouc
 			operator=operator,
 			voucher_condition=voucher_condition,
 		),
-		args,
+		{
+			"item_code": args["item_code"],
+			"warehouse": args["warehouse"],
+			"posting_datetime": args["posting_datetime"],
+		},
 		as_dict=1,
 	)
 
